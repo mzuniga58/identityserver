@@ -97,12 +97,14 @@ namespace IdentityServerAspNetIdentity
         public void Configure(IApplicationBuilder app, ILogger<Startup> logger)
         {
             // this will do the initial DB population
-            //InitializeDatabase(app, logger);
+            InitializeDatabase(app, logger);
             
             if (Environment.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
+
+      
 
             app.UseStaticFiles();
 
